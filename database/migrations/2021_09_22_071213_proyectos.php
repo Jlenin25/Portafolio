@@ -13,7 +13,14 @@ class Proyectos extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('proyectos', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nombre');
+            $table->string('imagen');
+            $table->string('descripcion');
+            $table->string('url');
+            $table->timestamps();
+        });
     }
 
     /**
